@@ -42,7 +42,7 @@ namespace TypeGen.Cli
         {
             try
             {
-                if (args == null || args.Length == 0 || _consoleArgsReader.ContainsHelpParam(args))
+                if (args == null || _consoleArgsReader.ContainsHelpParam(args))
                 {
                     ShowHelp();
                     return;
@@ -56,8 +56,11 @@ namespace TypeGen.Cli
                 }
 
                 bool verbose = _consoleArgsReader.ContainsVerboseParam(args);
-                string[] projectFolders = _consoleArgsReader.GetProjectFolders(args).ToArray();
                 string[] configPaths = _consoleArgsReader.GetConfigPaths(args).ToArray();
+
+                string[] projectFolders = _consoleArgsReader.ContainsProjectFolder(args) ?
+                    _consoleArgsReader.GetProjectFolders(args).ToArray() :
+                    new [] { "." };
 
                 for (var i = 0; i < projectFolders.Length; i++)
                 {

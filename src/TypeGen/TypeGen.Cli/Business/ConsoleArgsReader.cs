@@ -9,6 +9,8 @@ namespace TypeGen.Cli.Business
 {
     internal class ConsoleArgsReader
     {
+        private const string GetCwdCommand = "GET-CWD";
+
         /// <summary>
         /// Used to separate two or more paths; not a directory separator
         /// </summary>
@@ -19,9 +21,14 @@ namespace TypeGen.Cli.Business
             return args.Any(arg => arg.ToUpperInvariant() == "-H" || arg.ToUpperInvariant() == "-HELP");
         }
 
+        public bool ContainsProjectFolder(string[] args)
+        {
+            return args.Any() && !args[0].StartsWith("-") && args[0].ToUpperInvariant() != GetCwdCommand;
+        }
+
         public bool ContainsGetCwdParam(string[] args)
         {
-            return args.Any(arg => arg.ToUpperInvariant() == "GET-CWD");
+            return args.Any(arg => arg.ToUpperInvariant() == GetCwdCommand);
         }
 
         public bool ContainsVerboseParam(string[] args)

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>TypeGen.DotNetCli</id>
+    <version>1.6.2</version>
+    <authors>Jacek Burzynski</authors>
+    <owners>Jacek Burzynski</owners>
+    <licenseUrl>https://github.com/jburzynski/type-gen/blob/master/docs/LICENSE</licenseUrl>
+    <projectUrl>http://jburzynski.net/TypeGen</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/jburzynski/type-gen/master/docs/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DotNet CLI version of TypeGen - a C# to TypeScript file generator with support for one-class-per-file generation</description>
+	<releaseNotes>see the changelog on http://jburzynski.net/TypeGen/changelog</releaseNotes>
+    <tags>code-generator generator typescript ts dotnet-cli</tags>
+	<dependencies>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="TypeGen" version="1.6.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.App" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="NuGet.Configuration" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
