@@ -16,8 +16,7 @@ if (-not ($oldVersion -match $versionRegex) -or  -not ($newVersion -match $versi
 # replace files' contents
 
 $paths = "nuget-update.ps1",
-         "nuget\TypeGen.nuspec",
-		 "chocolatey\TypeGen.nuspec",
+         "nuget\TypeGen.DotNetCli.nuspec",
          "src\TypeGen\TypeGen.Cli\AppConfig.cs",
          "..\TypeGenDocs\source\conf.py"
 
