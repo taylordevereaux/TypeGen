@@ -7,10 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="NuGet.Configuration" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\TypeGen.Core\TypeGen.Core.csproj" />
+    <PackageReference Include="TypeGen" Version="1.6.3" />
   </ItemGroup>
 
 </Project>
