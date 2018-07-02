@@ -29,9 +29,5 @@ foreach ($path in $paths) {
 # remove old NuGet and chocolatey package
 
 if (Test-Path "nuget\TypeGen.$($oldVersion).nupkg") {
-  rm "nuget\TypeGen.$($oldVersion).nupkg"
-}
-
-if (Test-Path "chocolatey\TypeGen.$($oldVersion).nupkg") {
-  rm "chocolatey\TypeGen.$($oldVersion).nupkg"
+  rm "nuget\TypeGen.DotNetCli.$($oldVersion).nupkg"
 }
