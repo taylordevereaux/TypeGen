@@ -14,7 +14,7 @@ namespace TypeGen.Cli.Business
     /// <summary>
     /// For ASP.NET versions older than ASP.NET Core (addFilesToProject parameter)
     /// </summary>
-    internal class ProjectFileManager
+    internal class ProjectFileManager : IProjectFileManager
     {
         private const string TypeScriptCompileXPath = "/*[local-name()='Project']/*[local-name()='ItemGroup']/*[local-name()='TypeScriptCompile']";
 

@@ -11,7 +11,7 @@ using TypeGen.Core.Business;
 
 namespace TypeGen.Cli.Business
 {
-    internal class AssemblyResolver
+    internal class AssemblyResolver : IAssemblyResolver
     {
         private const string GlobalFallbackPath = @"C:\Program Files\dotnet\sdk\NuGetFallbackFolder";
         private const string SharedPath = @"C:\Program Files\dotnet\shared";

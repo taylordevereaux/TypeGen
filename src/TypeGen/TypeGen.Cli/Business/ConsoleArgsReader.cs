@@ -7,7 +7,7 @@ using TypeGen.Core.Extensions;
 
 namespace TypeGen.Cli.Business
 {
-    internal class ConsoleArgsReader
+    internal class ConsoleArgsReader : IConsoleArgsReader
     {
         private const string GetCwdCommand = "GETCWD";
         private const string GenerateCommand = "GENERATE";

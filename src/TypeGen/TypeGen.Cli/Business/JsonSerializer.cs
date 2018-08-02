@@ -10,7 +10,7 @@ using TypeGen.Core.Storage;
 
 namespace TypeGen.Cli.Business
 {
-    internal class JsonSerializer
+    internal class JsonSerializer : IJsonSerializer
     {
         private readonly FileSystem _fileSystem;
 
@@ -27,7 +27,7 @@ namespace TypeGen.Cli.Business
 
         public TObj Deserialize<TObj>(string jsonString) where TObj : class
         {
-            var serializer = new DataContractJsonSerializer(typeof(TgConfig));
+            var serializer = new DataContractJsonSerializer(typeof(TObj));
             var stream = new MemoryStream(Encoding.UTF8.GetBytes(jsonString));
 
             return (TObj)serializer.ReadObject(stream);
