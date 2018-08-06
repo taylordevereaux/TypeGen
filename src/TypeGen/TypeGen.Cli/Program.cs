@@ -22,7 +22,7 @@ namespace TypeGen.Cli
     {
         private static readonly IConsoleArgsReader _consoleArgsReader;
         private static readonly ILogger _logger;
-        private static readonly FileSystem _fileSystem;
+        private static readonly IFileSystem _fileSystem;
         private static readonly IConfigProvider _configProvider;
         private static readonly IGeneratorOptionsProvider _generatorOptionsProvider;
         private static readonly IProjectFileManager _projectFileManager;

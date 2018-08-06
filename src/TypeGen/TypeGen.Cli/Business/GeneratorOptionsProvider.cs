@@ -16,10 +16,10 @@ namespace TypeGen.Cli.Business
 {
     internal class GeneratorOptionsProvider : IGeneratorOptionsProvider
     {
-        private readonly FileSystem _fileSystem;
+        private readonly IFileSystem _fileSystem;
         private readonly ILogger _logger;
 
-        public GeneratorOptionsProvider(FileSystem fileSystem, ILogger logger)
+        public GeneratorOptionsProvider(IFileSystem fileSystem, ILogger logger)
         {
             _fileSystem = fileSystem;
             _logger = logger;

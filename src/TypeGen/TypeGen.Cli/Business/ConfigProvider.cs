@@ -12,11 +12,11 @@ namespace TypeGen.Cli.Business
 {
     internal class ConfigProvider : IConfigProvider
     {
-        private readonly FileSystem _fileSystem;
+        private readonly IFileSystem _fileSystem;
         private readonly ILogger _logger;
         private readonly IJsonSerializer _jsonSerializer;
 
-        public ConfigProvider(FileSystem fileSystem,
+        public ConfigProvider(IFileSystem fileSystem,
             ILogger logger,
             IJsonSerializer jsonSerializer)
         {

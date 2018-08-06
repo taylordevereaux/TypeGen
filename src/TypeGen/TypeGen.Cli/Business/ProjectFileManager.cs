@@ -18,9 +18,9 @@ namespace TypeGen.Cli.Business
     {
         private const string TypeScriptCompileXPath = "/*[local-name()='Project']/*[local-name()='ItemGroup']/*[local-name()='TypeScriptCompile']";
 
-        private readonly FileSystem _fileSystem;
+        private readonly IFileSystem _fileSystem;
 
-        public ProjectFileManager(FileSystem fileSystem)
+        public ProjectFileManager(IFileSystem fileSystem)
         {
             _fileSystem = fileSystem;
         }

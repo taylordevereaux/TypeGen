@@ -5,6 +5,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Configuration" Version="4.3.0" />
-    <PackageReference Include="TypeGen" Version="1.6.4" />
+    <PackageReference Include="TypeGen" Version="1.6.5" />
   </ItemGroup>
 </Project>
