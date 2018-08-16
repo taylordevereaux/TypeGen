@@ -1,0 +1,12 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+platform: Any CPU
+configuration: Release
+
+before_build:
+  - dotnet restore src/TypeGen/TypeGen.Cli
+  - dotnet restore src/TypeGen/TypeGen.Cli.Test
+
+build:
+  project: src/TypeGen/TypeGen.sln
