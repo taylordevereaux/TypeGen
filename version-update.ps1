@@ -18,6 +18,7 @@ if (-not ($oldVersion -match $versionRegex) -or  -not ($newVersion -match $versi
 $paths = "nuget-update.ps1",
          "nuget\TypeGen.DotNetCli.nuspec",
          "src\TypeGen\TypeGen.Cli\AppConfig.cs",
+		 "src\TypeGen\TypeGen.Cli\TypeGen.Cli.csproj",
          "..\TypeGenDocs\source\conf.py"
 
 foreach ($path in $paths) {
@@ -28,6 +29,6 @@ foreach ($path in $paths) {
 
 # remove old NuGet and chocolatey package
 
-if (Test-Path "nuget\TypeGen.$($oldVersion).nupkg") {
+if (Test-Path "nuget\TypeGen.DotNetCli.$($oldVersion).nupkg") {
   rm "nuget\TypeGen.DotNetCli.$($oldVersion).nupkg"
 }
