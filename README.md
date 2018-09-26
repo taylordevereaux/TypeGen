@@ -10,7 +10,6 @@ C# to TypeScript file generator with support for one-class-per-file generation
 
 * [NuGet](https://www.nuget.org/packages/TypeGen)
 * [NuGet - DotNetCli version](https://www.nuget.org/packages/TypeGen.DotNetCli)
-* [Chocolatey](https://chocolatey.org/packages/TypeGen)
 
 ## Quick start
 
