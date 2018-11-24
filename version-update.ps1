@@ -17,9 +17,9 @@ if (-not ($oldVersion -match $versionRegex) -or  -not ($newVersion -match $versi
 
 $paths = "nuget-update.ps1",
          "nuget\TypeGen.DotNetCli.nuspec",
-         "src\TypeGen\TypeGen.Cli\AppConfig.cs",
-		 "src\TypeGen\TypeGen.Cli\TypeGen.Cli.csproj",
-         "..\TypeGenDocs\source\conf.py"
+         "src\TypeGen\TypeGen.Cli\AppConfig.cs"
+		 #"src\TypeGen\TypeGen.Cli\TypeGen.Cli.csproj",
+         #"..\TypeGenDocs\source\conf.py"
 
 foreach ($path in $paths) {
   if (Test-Path $path) {
