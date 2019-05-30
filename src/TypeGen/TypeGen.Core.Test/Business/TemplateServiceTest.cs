@@ -351,6 +351,24 @@ namespace TypeGen.Core.Test.Business
             //assert
             Assert.Equal(@"a | ""stringValue""", actual);
         }
+        
+        [Fact]
+        public void FillEnumValueTemplate_StringValuesGiven_TemplateValueQuotes()
+        {
+            _internalStorage.GetEmbeddedResource("TypeGen.Core.Templates.EnumValue.tpl")
+                .Returns("$tg{name} | $tg{value}");
+
+            var generatorOptions = new GeneratorOptions { EnumStringInitializers = true };
+            var generatorOptionsProvider = new GeneratorOptionsProvider { GeneratorOptions = generatorOptions };
+            var templateService = new TemplateService(_internalStorage, generatorOptionsProvider);
+            
+            string actualDoubleQuote = templateService.FillEnumValueTemplate("a", "stringValue");
+            generatorOptions.SingleQuotes = true;
+            string actualSingleQuote = templateService.FillEnumValueTemplate("a", "stringValue");
+
+            Assert.Equal(@"a | ""stringValue""", actualDoubleQuote);
+            Assert.Equal(@"a | 'stringValue'", actualSingleQuote);
+        }
 
         [Fact]
         public void FillEnumValueTemplate_SpecialCharsPresent_SpecialCharsReplaced()
